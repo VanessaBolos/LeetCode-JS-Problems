@@ -1,29 +1,23 @@
 // LEETCODE PROBLEM 912. SORT AN ARRAY
 // Given an array of integers nums, sort the array in ascending order and return it.
-
 // You must solve the problem without using any built-in functions in O(nlog(n)) time complexity and with the smallest space complexity possible.
 
- 
-
 // Example 1:
-
 // Input: nums = [5,2,3,1]
 // Output: [1,2,3,5]
 // Explanation: After sorting the array, the positions of some numbers are not changed (for example, 2 and 3), while the positions of other numbers are changed (for example, 1 and 5).
-// Example 2:
 
+// Example 2:
 // Input: nums = [5,1,1,2,0,0]
 // Output: [0,0,1,1,2,5]
 // Explanation: Note that the values of nums are not necessairly unique.
  
-
 // Constraints:
-
 // 1 <= nums.length <= 5 * 104
 // -5 * 104 <= nums[i] <= 5 * 104
 
 
-//Solved by mergeSort method with time complexity of O(nlog(n)) since we are combining both dividing (O(logn)) and merging (O(n))
+// Solved by mergeSort method with time complexity of O(nlog(n)) since we are combining both dividing (O(logn)) and merging (O(n))
 
 /**
  * @param {number[]} nums
@@ -85,6 +79,11 @@ let merge = function(left, right) {
     }
 
     // Return the merged array, which is now sorted
-    return result;
-    
-}
+    return result;    
+};
+let nums1 = [5, 2, 3, 1]; // First array
+let nums2 = [5, 1, 1, 2, 0, 0]; // Second array
+
+console.log("Sorted nums1:", sortArray(nums1)); 
+console.log("Sorted nums2:", sortArray(nums2));
+
